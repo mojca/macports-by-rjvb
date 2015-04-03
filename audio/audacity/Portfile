@@ -2,6 +2,7 @@
 # kate: backspace-indents true; indent-pasted-text true; indent-width 4; keep-extra-spaces true; remove-trailing-spaces modified; replace-tabs true; replace-tabs-save true; syntax Tcl/Tk; tab-indents true; tab-width 4;
 
 PortSystem          1.0
+PortGroup           wxWidgets 1.0
 
 fetch.type          git
 if {[file exists ${filespath}/audacity-svn/.git]} {
@@ -37,6 +38,7 @@ license             GPL-2
 maintainers         gmail.com:rjvbertin openmaintainer
 universal_variant   no
 use_parallel_build  no
+wxWidgets.use       wxGTK-2.8
 
 homepage            http://audacity.sourceforge.net/
 
@@ -58,7 +60,7 @@ depends_lib-append  port:expat \
                     port:portaudio \
                     port:soundtouch \
                     port:twolame \
-                    port:wxgtk-2.8 \
+                    port:${wxWidgets.port}
 
 patch.pre_args      -p1
 patchfiles-append   build-FileDialog-gtk.diff                   \
@@ -114,6 +116,6 @@ configure.args-append \
                     --with-twolame \
                     --with-widgetextra=local \
                     CPPFLAGS=-I${prefix}/include \
-                    WX_CONFIG=${prefix}/Library/Frameworks/wxWidgets.framework/Versions/wxGTK/2.8/bin/wx-config
+                    WX_CONFIG=${wxWidgets.wxconfig}
 
 livecheck.type      none
