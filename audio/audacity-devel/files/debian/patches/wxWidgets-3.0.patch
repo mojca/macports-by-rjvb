@@ -479,7 +479,7 @@ Bug-Debian: https://bugs.debian.org/749659
  // by wxWidgets 2.9+.  However, this han't made it into a release yet,
 --- a/src/DirManager.cpp
 +++ b/src/DirManager.cpp
-@@ -1417,7 +1417,7 @@
+@@ -1419,7 +1419,7 @@
        {
           wxString msgA =
  _("Project check of \"%s\" folder \
@@ -488,7 +488,7 @@ Bug-Debian: https://bugs.debian.org/749659
  \n('aliased files'). There is no way for Audacity \
  \nto recover these files automatically. \
  \n\nIf you choose the first or second option below, \
-@@ -1429,7 +1429,7 @@
+@@ -1431,7 +1431,7 @@
  \nproject in its current state, unless you \"Close \
  \nproject immediately\" on further error alerts.");
           wxString msg;
@@ -497,7 +497,7 @@ Bug-Debian: https://bugs.debian.org/749659
           const wxChar *buttons[] =
              {_("Close project immediately with no changes"),
                 _("Treat missing audio as silence (this session only)"),
-@@ -1487,11 +1487,11 @@
+@@ -1489,11 +1489,11 @@
        {
           wxString msgA =
  _("Project check of \"%s\" folder \
@@ -511,7 +511,7 @@ Bug-Debian: https://bugs.debian.org/749659
           const wxChar *buttons[] = {_("Regenerate alias summary files (safe and recommended)"),
                                      _("Fill in silence for missing display data (this session only)"),
                                      _("Close project immediately with no further changes"),
-@@ -1538,7 +1538,7 @@
+@@ -1540,7 +1540,7 @@
        {
           wxString msgA =
  _("Project check of \"%s\" folder \
@@ -520,7 +520,7 @@ Bug-Debian: https://bugs.debian.org/749659
  \nprobably due to a bug, system crash, or accidental \
  \ndeletion. There is no way for Audacity to recover \
  \nthese missing files automatically. \
-@@ -1548,7 +1548,7 @@
+@@ -1550,7 +1550,7 @@
  \n\nNote that for the second option, the waveform \
  \nmay not show silence.");
           wxString msg;
@@ -1106,7 +1106,7 @@ Bug-Debian: https://bugs.debian.org/749659
     while(updateResult == eProgressSuccess) {
 --- a/src/export/ExportMP3.cpp
 +++ b/src/export/ExportMP3.cpp
-@@ -1799,7 +1799,7 @@
+@@ -1801,7 +1801,7 @@
  
        if (bytes < 0) {
           wxString msg;

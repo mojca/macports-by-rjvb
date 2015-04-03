@@ -235,7 +235,7 @@
  
 --- a/src/Project.cpp
 +++ b/src/Project.cpp
-@@ -83,10 +83,10 @@
+@@ -84,10 +84,10 @@
  
  #include <wx/arrimpl.cpp>       // this allows for creation of wxObjArray
  
