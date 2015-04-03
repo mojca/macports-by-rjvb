@@ -49,6 +49,17 @@ Bug-Debian: https://bugs.debian.org/757531
  /*** scaled bit reverse and first radix 2 stage forward or inverse fft ***/
  float	f0r;
  float	f0i;
+@@ -1347,8 +1347,8 @@ ioptr[6] = scale*f3r;
+ ioptr[7] = scale*f3i;
+ }
+
+-inline void ifft8pt(float *ioptr, float scale);
+-inline void ifft8pt(float *ioptr, float scale){
++static inline void ifft8pt(float *ioptr, float scale);
++static inline void ifft8pt(float *ioptr, float scale){
+ /***   RADIX 8 ifft	***/
+ float w0r = 1.0/MYROOT2; /* cos(pi/4)	*/
+ float f0r, f0i, f1r, f1i, f2r, f2i, f3r, f3i;
 @@ -1467,8 +1467,8 @@
  ioptr[15] = scale*f6i;
  }
