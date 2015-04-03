@@ -4,13 +4,15 @@
 PortSystem          1.0
 PortGroup           wxWidgets 1.0
 
-fetch.type          git
 if {[file exists ${filespath}/audacity-svn/.git]} {
+    fetch.type      git
     git.url         ${filespath}/audacity-svn
     git.branch      5195646
 } else {
     PortGroup       github 1.0
     github.setup    RJVB audacity 5195646
+    checksums       rmd160  63af138d914c4b74eb7aff5d548b4c3c797edffb \
+                    sha256  4b31a521985859cd68b995f4fd672d3e334d5637b110bb948cbcb0e406ebfa0e
 }
 
 name                audacity
